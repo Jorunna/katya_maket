@@ -1,0 +1,473 @@
+*{margin:0; position: relative; }
+
+@font-face{
+    font-family: Roboto-regular; 
+    src: local("roboto-regular"), 
+    url(fonts/roboto-regular.ttf); 
+ }
+
+
+@font-face{
+    font-family: Scripticus; 
+    src: local("Scripticus"), 
+    url(fonts/Scripticus.otf); 
+ }
+
+ @font-face {
+    font-family: GardensC; 
+    src: local("GardensC"), 
+    url(fonts/GardensC.otf);
+ } 
+
+h2{
+	font: bold 24px Scripticus;
+	left:60px;
+}
+
+ ul{list-style-type: none;}
+
+ .clr{clear: both;}
+
+
+.header{
+
+	width: 100%;
+	padding: 20px 10px;
+}
+
+.header_content{
+
+	width: 75%;
+	max-width: 1440px;
+    z-index: 150;
+    left: 14%;
+    top: 40%;
+}
+
+#welcome{
+
+	float:right;
+	margin: 5px 18% 35px 50px;
+}
+
+#welcome > div{
+
+	color: #ff3366;
+	font: 14px Roboto-regular;
+	float:left;
+}
+
+#welcome img{
+
+	padding: 7px;
+	height:27px;
+	width: 27px;
+}
+
+#welcome div span{	top: -14px; }
+
+
+#menu ul{
+
+	color: #0099ff;
+	font: bold 24px Scripticus;
+	float: right;
+	width: 50%;
+	max-width: 80%;
+	min-width: 30%;
+	margin-right: 16%;		
+}
+
+#menu ul li{
+
+	float: left;
+	margin-left: 4%;
+}
+
+.slider_text{
+
+	max-width: 35%;
+	min-width:300px;
+	width: 35%;
+	margin: 8% 5% 5% 49%;
+
+}
+
+.slider_text h1{ font: 36px MyriadPro; }
+
+ h3 {font: 20px Scripticus; margin: 3% 0 10% 0;}
+.slider_text p{font: 16px/27px  MyriadPro; }
+
+
+/* -----------------------------------MAIN SLIDER -------------------------------------*/
+
+.main_slider{
+	
+	position: relative;
+	width:1920px;  
+	/*min-width: 50%;*/
+	margin: 0 auto;
+
+}
+
+
+.main_slider > ul > li > img{
+
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+}
+
+.main_slider .active img{
+
+	opacity: 1;
+	transition: 4s;
+}
+
+#logo{
+
+	position: absolute;
+	width:415px;
+	height:291px;
+	top:-44px;
+	left:400px;
+	z-index: 100;
+}
+
+
+#detail_btn{
+
+    background-color: rgba(5,5,5,0.26);
+	font: 18px/38px GardensC;
+	color: white;
+	border-radius: 50px;
+	width: 180px;
+	max-width: 190px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	z-index: 100;
+	left: 90px;
+
+}
+
+#detail_arrow{
+
+	float:right;
+	width: 23%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: white;
+	
+}
+
+#detail_arrow span{
+
+	color: black;
+	font: bold 18px/38px GardensC;
+}
+
+.navigation_slider{
+
+	margin: 60px auto;
+	width: 134px;
+	left: 120px;
+	height: 1px;
+}
+
+.navigation_slider .nav, .navigation_slider .active{
+	
+	float: left;
+	margin: 4px;
+	width: 11px;
+	height: 11px;
+	border-radius: 11px;
+	border: 1px solid rgba(1,1,1,0);
+
+}
+
+.navigation_slider .nav_in{
+
+	background-color: black;
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	z-index: 100;
+	top: 2px;
+	margin: 0 auto;
+}
+
+.navigation_slider div.active{
+
+	background-color: white;
+	border: 1px solid black;
+
+}
+
+
+
+/*---------------- Новые записи -------------------------*/
+
+
+.new_posts{
+	margin: 50px auto;
+	width: 1276px;
+	height: 524px;
+	padding: 1px 30px;
+	overflow: hidden;
+}
+
+.wave{
+
+	background-image: url(img/wave.png);
+	background-repeat: repeat-x;
+	width: 90%;
+	height: 4px;
+	margin: 0 auto;
+}
+
+#posts{
+
+	width: calc(100%*6);
+	position: absolute;
+}
+
+#posts > ul> li> img{
+
+	width: 218px;
+	height: 218px;
+	margin: 30px 0;
+}
+
+#posts ul li{
+	display: inline-block;
+	width: 240px;
+	margin: 30px 35px 50px 0;
+}
+
+
+#posts ul li.hidden{
+
+	display: none;
+	transition: 4s;
+}
+
+#posts p{
+
+	text-align: left;
+	font: 16px MyriadPro;
+}
+
+.date_post, .likes_post, .comments_post{
+	float: left;
+}
+
+.info_post{
+	
+	padding: 10px 0;
+	margin-top: 40px;
+	border-top: solid 1px #ebebea;
+	bottom: 0;
+}
+
+.info_post img{
+
+	margin-right: 3px;
+	top:1px;
+}
+
+.info_post span{
+
+	margin-right: 10px;
+	font: 12px MyriadPro;
+	color: #bbbbbb;
+
+}
+
+.prev_post{
+
+	float: left;
+	top: 140px;
+	margin-right: 50px;
+	z-index: 10;
+
+}
+
+.next_post{
+
+	float: right;
+	top: 140px;
+	z-index: 10;
+
+}
+
+/*---------------- Тренинги и индивидуальные консультации -------------------------*/
+
+.trainings{
+
+	background-image: url(img/tabs_background.jpg);
+	width: 1392px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.trainings h2{left: 20px; padding-top: 50px;}
+
+.trainings ul li{display: inline-block;}
+
+
+.trainings > div.topics, .trainings > div.formats, .trainings > div.opinions{display: none;}
+
+.trainings > div.active{
+
+	display: block;
+}
+
+
+
+#menu_trainings{
+
+	margin: 0 auto;
+	width: 60%;
+}
+
+#menu_trainings ul li{
+
+	border-bottom: dotted 1px #35b4fd;
+	padding: 2px 0;
+	font: 16px MyriadPro;
+	margin: 38px 20px;
+}
+
+#menu_trainings ul li.active{
+
+	border-radius: 40px;
+	background-color: #35b4fd;
+	padding: 9px 20px;
+	margin: 30px 0;
+	color: white;
+}
+
+
+.topics ul li, .formats ul li, .opinions ul li{
+
+	font: bold 18px Scripticus;
+	margin: 30px;
+	height: 277px;
+	width: 244px;
+
+	vertical-align: middle; /* не знаю как это работает, но без этого один из <li> чуть опущен */
+
+}
+
+.topics ul li img, .formats ul li img, .opinions ul li img{
+
+	top:0;
+	margin: 10px 0;
+}
+
+.topics ul li span, .formats ul li span, .opinions ul li span{
+
+	bottom:0; /* нихрена не работает, даже с дисплей блок */
+}
+
+
+.topics ul li:hover, .formats ul li:hover, .opinions ul li:hover{
+
+	background-image: url(img/training-hover.png);
+
+}
+
+#pdf_copy{
+
+	width: 225px;
+	height: 50px;
+	background-color: #ff508d;
+	border-bottom: solid 4px #e4004d;
+	color: white;
+	font: 13px MyriadPro;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+ #pdf_copy img{
+
+	top: 17px;
+	margin-right: 6px;
+}
+
+#pdf_copy span{
+
+	top: 10px;
+}
+
+
+.opinions{
+
+	width: 888px;
+	margin: 50px auto;
+	text-align: left;
+}
+.opinions h3{margin: 10px 0;}
+
+.opinions p{
+
+	font: 14px/24px MyriadPro; 
+	color: #333333; 
+	margin: 20px 0;
+}
+.opinions span{
+
+	font: italic 14px/24px MyriadPro; 
+	color: #333333;
+}
+
+.opinions img{
+
+	float: left;
+	top:-20px;
+}
+
+.tab{
+	position: relative;
+}
+
+#nearest_event{
+	position: relative;
+	margin: 0 auto;
+	width: 1392px;
+}
+
+.event_information{
+	display: inline-block;
+	width: 30%;
+	top: 230px;
+	z-index: 100;
+}
+
+.event_description{
+	display: inline-block;
+	left: 30%;
+	width: 70%;
+	top: 0;
+}
+.event_description img{
+	position: absolute;
+	width: 100%;
+
+}
+
+.event_description p{
+		position: absolute;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+}
+
+.date_event{ margin: 0 0 16px; font: normal 18px MyriadPro ;}
+.place_event{ margin: 0 0 16px; font: normal 18px/15px MyriadPro;}
+.name_event{  margin: 0 0 16px; font: normal 14px MyriadPro; text-transform: uppercase;}
+.price_event{ margin: 0 0 16px; font: italic 14px MyriadPro;}
